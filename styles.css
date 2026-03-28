@@ -1,0 +1,505 @@
+:root {
+  --bg: #f3ede2;
+  --surface: rgba(255, 250, 242, 0.88);
+  --surface-strong: #fff9ef;
+  --text: #1e2430;
+  --muted: #5d6575;
+  --accent: #c44d1e;
+  --accent-dark: #7f2f16;
+  --accent-soft: #f2c27f;
+  --line: rgba(30, 36, 48, 0.12);
+  --shadow: 0 18px 60px rgba(67, 35, 18, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Instrument Sans", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(196, 77, 30, 0.22), transparent 30%),
+    radial-gradient(circle at top right, rgba(34, 111, 84, 0.16), transparent 28%),
+    linear-gradient(180deg, #efe2cc 0%, var(--bg) 42%, #f8f1e6 100%);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 16px auto 40px;
+}
+
+.hero,
+.section,
+.ticker {
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
+
+.hero {
+  padding: 28px;
+  border-radius: 30px;
+  background: linear-gradient(145deg, rgba(255, 248, 237, 0.95), rgba(250, 239, 222, 0.82));
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--accent), #ee8d2d);
+  color: #fff7f0;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.65rem;
+  letter-spacing: 0.08em;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.brand-text strong,
+.eyebrow,
+.tag,
+.business-city {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.brand-text strong {
+  font-size: 1.1rem;
+}
+
+.brand-text small {
+  color: var(--muted);
+}
+
+.topbar-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+
+.topbar-links a:hover,
+.headline-card a:hover {
+  color: var(--accent-dark);
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr;
+  gap: 26px;
+  margin-top: 34px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--accent-dark);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.hero-copy h1,
+.section-heading h2,
+.services-banner h2,
+.cta-card h2 {
+  margin: 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 0.96;
+}
+
+.hero-copy h1 {
+  font-size: clamp(3.2rem, 7vw, 5.8rem);
+  max-width: 11ch;
+}
+
+.hero-text,
+.headline-card p,
+.business-card p,
+.service-card p,
+.cta-card p,
+.services-banner p {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 20px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 700;
+  transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
+}
+
+.button:hover,
+.filter-button:hover {
+  transform: translateY(-2px);
+}
+
+.button-primary {
+  background: var(--accent);
+  color: #fff8f2;
+}
+
+.button-primary:hover {
+  background: var(--accent-dark);
+}
+
+.button-secondary {
+  border-color: var(--line);
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.hero-highlight,
+.headline-card,
+.business-card,
+.service-card,
+.cta-card,
+.ticker,
+.services-banner {
+  border-radius: 24px;
+  background: var(--surface);
+}
+
+.hero-highlight {
+  padding: 24px;
+  border: 1px solid rgba(196, 77, 30, 0.18);
+}
+
+.highlight-label,
+.edition-card p {
+  margin: 0 0 8px;
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
+.hero-highlight h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.highlight-list {
+  padding: 0;
+  margin: 22px 0;
+  list-style: none;
+  display: grid;
+  gap: 14px;
+}
+
+.highlight-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.highlight-list span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 52px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(196, 77, 30, 0.12);
+  color: var(--accent-dark);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.edition-card {
+  padding: 18px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(196, 77, 30, 0.16), rgba(242, 194, 127, 0.2));
+}
+
+.edition-card strong {
+  font-size: 1.2rem;
+}
+
+.ticker {
+  margin: 18px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  background: rgba(30, 36, 48, 0.95);
+  color: #fff0da;
+}
+
+.ticker-track {
+  display: inline-flex;
+  gap: 28px;
+  padding: 14px 24px;
+  animation: ticker-scroll 24s linear infinite;
+}
+
+.ticker-track span::before {
+  content: "*";
+  margin-right: 10px;
+  color: var(--accent-soft);
+}
+
+@keyframes ticker-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-30%);
+  }
+}
+
+.section {
+  margin-top: 18px;
+  padding: 28px;
+  background: rgba(255, 249, 239, 0.82);
+  border-radius: 30px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: end;
+  margin-bottom: 22px;
+}
+
+.section-heading h2,
+.services-banner h2,
+.cta-card h2 {
+  font-size: clamp(2.1rem, 4vw, 3.4rem);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-button {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--muted);
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 180ms ease, border-color 180ms ease, color 180ms ease, background-color 180ms ease;
+}
+
+.filter-button.is-active {
+  background: var(--text);
+  color: #fff;
+  border-color: var(--text);
+}
+
+.news-grid,
+.business-showcase,
+.services-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.news-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.headline-card {
+  padding: 22px;
+  border: 1px solid transparent;
+  transition: transform 180ms ease, opacity 180ms ease, border-color 180ms ease;
+}
+
+.headline-card:hover,
+.business-card:hover,
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(196, 77, 30, 0.18);
+}
+
+.headline-card.featured {
+  grid-column: span 2;
+  background: linear-gradient(145deg, rgba(255, 243, 223, 0.92), rgba(255, 253, 247, 0.8));
+}
+
+.headline-card h3,
+.business-card h3,
+.service-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.35rem;
+}
+
+.headline-card a {
+  font-weight: 700;
+  color: var(--accent-dark);
+}
+
+.tag {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(196, 77, 30, 0.12);
+  color: var(--accent-dark);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.business-showcase,
+.services-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.business-card,
+.service-card {
+  padding: 22px;
+}
+
+.business-city {
+  margin: 0 0 10px;
+  color: var(--accent-dark);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.services-banner,
+.cta-card {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+  padding: 24px;
+}
+
+.lead-form {
+  display: grid;
+  gap: 14px;
+  padding: 22px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.lead-form label {
+  display: grid;
+  gap: 8px;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.lead-form input,
+.lead-form select {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 14px;
+  border: 1px solid rgba(30, 36, 48, 0.12);
+  border-radius: 14px;
+  font: inherit;
+  background: #fffdf8;
+}
+
+.lead-form input:focus,
+.lead-form select:focus {
+  outline: 2px solid rgba(196, 77, 30, 0.24);
+  border-color: var(--accent);
+}
+
+.form-note {
+  margin: 0;
+  color: var(--muted);
+}
+
+.is-hidden {
+  display: none;
+}
+
+@media (max-width: 960px) {
+  .hero-content,
+  .services-banner,
+  .cta-card,
+  .news-grid,
+  .business-showcase,
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .headline-card.featured {
+    grid-column: span 1;
+  }
+
+  .section-heading,
+  .topbar {
+    align-items: start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    width: min(100% - 20px, 1180px);
+    margin: 10px auto 24px;
+  }
+
+  .hero,
+  .section {
+    padding: 20px;
+    border-radius: 24px;
+  }
+
+  .hero-copy h1 {
+    max-width: 100%;
+  }
+
+  .hero-actions,
+  .topbar-links,
+  .filters {
+    width: 100%;
+  }
+
+  .button,
+  .filter-button {
+    width: 100%;
+  }
+
+  .ticker-track {
+    gap: 20px;
+    animation-duration: 18s;
+  }
+}

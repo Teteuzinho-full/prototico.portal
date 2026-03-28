@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SC em Foco | Noticias, Empresas e Servicos de Santa Catarina</title>
+  <meta
+    name="description"
+    content="Portal de noticias de Santa Catarina com cobertura diaria, espaco para empresas locais e divulgacao de servicos profissionais."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <nav class="topbar">
+        <a class="brand" href="#top">
+          <span class="brand-mark">SC</span>
+          <span class="brand-text">
+            <strong>em Foco</strong>
+            <small>Noticias diarias FALSAS e negocios locais</small>
+          </span>
+        </a>
+        <div class="topbar-links">
+          <a href="#noticias">Noticias</a>
+          <a href="#empresas">Empresas</a>
+          <a href="#servicos">Servicos</a>
+          <a href="#anuncie">Anuncie</a>
+        </div>
+      </nav>
+
+      <section class="hero-content" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">Portal regional de Santa Catarina (Site prototico) </p>
+          <h1>Noticias diarias *FALSAS* SITE PROTOTIPO, visibilidade local e conexao com quem faz a economia catarinense acontecer.</h1>
+          <p class="hero-text">
+            (Tota noticia nesse site não vericidade)<br> Um portal pensado para informar a populacao, valorizar empresas do estado e aproximar servicos profissionais de quem precisa contratar.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#noticias">Ver manchetes</a>
+            <a class="button button-secondary" href="#anuncie">Divulgar meu negocio</a>
+          </div>
+        </div>
+
+        <aside class="hero-highlight">
+          <p class="highlight-label">Atualizacao diaria</p>
+          <h2>Painel editorial</h2>
+          <ul class="highlight-list">
+            <li><span>06h</span> Primeiras manchetes do dia</li>
+            <li><span>12h</span> Giro regional e economia</li>
+            <li><span>18h</span> Servicos, agenda e destaques</li>
+          </ul>
+          <div class="edition-card">
+            <p>Edicao de hoje</p>
+            <strong id="current-date">Carregando data...</strong>
+          </div>
+        </aside>
+      </section>
+    </header>
+
+    <main>
+      <section class="ticker" aria-label="Destaques rapidos">
+        <div class="ticker-track">
+          <span>Florianopolis</span>
+          <span>Economia regional</span>
+          <span>Turismo</span>
+          <span>Empreendedorismo</span>
+          <span>Servicos profissionais</span>
+          <span>Vale do Itajai</span>
+          <span>Norte catarinense</span>
+          <span>Oeste em pauta</span>
+        </div>
+      </section>
+
+      <section class="section" id="noticias">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Cobertura diaria</p>
+            <h2>Ultimas noticias de Santa Catarina</h2>
+          </div>
+          <div class="filters" role="tablist" aria-label="Filtrar noticias">
+            <button class="filter-button is-active" type="button" data-filter="all">Todas</button>
+            <button class="filter-button" type="button" data-filter="politica">Politica</button>
+            <button class="filter-button" type="button" data-filter="economia">Economia</button>
+            <button class="filter-button" type="button" data-filter="cidades">Cidades</button>
+            <button class="filter-button" type="button" data-filter="turismo">Turismo</button>
+          </div>
+        </div>
+
+        <div class="news-grid">
+          <article class="headline-card featured" data-category="economia">
+            <span class="tag">Economia</span>
+            <h3>Empresas catarinenses ampliam presenca digital e impulsionam negocios regionais</h3>
+            <p>Reportagens especiais, entrevistas e oportunidades para marcas que desejam alcancar novos clientes em todo o estado.</p>
+            <a href="#anuncie">Saiba como anunciar</a>
+          </article>
+
+          <article class="headline-card" data-category="cidades">
+            <span class="tag">Cidades</span>
+            <h3>Mobilidade urbana e infraestrutura entram no radar das principais cidades catarinenses</h3>
+            <p>Conteudo local com foco em obras, transito, bairros em crescimento e impacto na rotina da populacao.</p>
+            <a href="#newsletter">Receber boletim</a>
+          </article>
+
+          <article class="headline-card" data-category="turismo">
+            <span class="tag">Turismo</span>
+            <h3>Roteiros de praia, serra e interior movimentam turismo e servicos em todas as regioes</h3>
+            <p>Guias, eventos e coberturas especiais para fortalecer o setor e atrair visitantes durante o ano inteiro.</p>
+            <a href="#servicos">Explorar servicos</a>
+          </article>
+
+          <article class="headline-card" data-category="politica">
+            <span class="tag">Politica</span>
+            <h3>Painel politico acompanha decisoes que afetam municipios, comercio e geracao de empregos</h3>
+            <p>Resumo objetivo com linguagem acessivel para manter o publico informado sobre os temas mais relevantes do estado.</p>
+            <a href="#noticias">Ler mais</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split-section" id="empresas">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Espaco comercial</p>
+            <h2>Divulgacao de empresas catarinenses</h2>
+          </div>
+        </div>
+
+        <div class="business-showcase">
+          <article class="business-card">
+            <p class="business-city">Joinville</p>
+            <h3>Industria e tecnologia</h3>
+            <p>Vitrine para empresas com foco em inovacao, producao, exportacao e oportunidades de parceria.</p>
+          </article>
+
+          <article class="business-card">
+            <p class="business-city">Blumenau</p>
+            <h3>Comercio e servicos</h3>
+            <p>Destaques patrocinados para marcas locais, campanhas sazonais e lancamentos voltados ao consumidor regional.</p>
+          </article>
+
+          <article class="business-card">
+            <p class="business-city">Chapeco</p>
+            <h3>Agronegocio e logistica</h3>
+            <p>Espaco editorial e publicitario para quem movimenta cadeias produtivas e quer ganhar relevancia no mercado.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="servicos">
+        <div class="services-banner">
+          <div>
+            <p class="eyebrow">Servicos profissionais</p>
+            <h2>Profissionais em evidencia para todo tipo de necessidade</h2>
+            <p>Advogados, arquitetos, contadores, clinicas, oficinas, designers, tecnicos e consultores em um so portal.</p>
+          </div>
+          <a class="button button-primary" href="#anuncie">Quero divulgar meu servico</a>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <h3>Saude e bem-estar</h3>
+            <p>Clinicas, consultorios, terapias e atendimento especializado com apresentacao profissional.</p>
+          </article>
+          <article class="service-card">
+            <h3>Casa e construcao</h3>
+            <p>Engenharia, reformas, marcenaria, eletrica, hidraulica e manutencao residencial.</p>
+          </article>
+          <article class="service-card">
+            <h3>Juridico e contabil</h3>
+            <p>Especialistas para empresas e pessoas fisicas com foco em confianca e autoridade local.</p>
+          </article>
+          <article class="service-card">
+            <h3>Marketing e tecnologia</h3>
+            <p>Agencias, freelancers e consultorias para acelerar a presenca digital de negocios catarinenses.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section cta-section" id="anuncie">
+        <div class="cta-card">
+          <div>
+            <p class="eyebrow">Monetizacao do portal</p>
+            <h2>Venda espacos publicitarios, publieditoriais e paginas de parceiros</h2>
+            <p>
+              Estruture planos para materias patrocinadas, banners, vitrine de servicos e pacotes mensais para empresas de Santa Catarina.
+            </p>
+          </div>
+
+          <form class="lead-form" id="newsletter">
+            <label>
+              Nome da empresa
+              <input type="text" name="company" placeholder="Ex.: Serra Sul Turismo">
+            </label>
+            <label>
+              E-mail comercial
+              <input type="email" name="email" placeholder="contato@empresa.com.br">
+            </label>
+            <label>
+              Segmento
+              <select name="segment">
+                <option>Empresa local</option>
+                <option>Servico profissional</option>
+                <option>Agencia / parceiro</option>
+              </select>
+            </label>
+            <button class="button button-primary" type="submit">Solicitar proposta</button>
+            <p class="form-note" id="form-feedback">Receba retorno comercial para anunciar no portal.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
